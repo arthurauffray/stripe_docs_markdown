@@ -1,0 +1,15 @@
+# Stripe Docs Markdown
+
+Entire Stripe API documentation in Markdown format. Organized by category and optimized for LLM context.
+
+## Navigation
+- [Documentation Root](./docs/)
+
+## Key Sections
+- Introduction (Auth, Errors, Expansion)
+- Core Resources (Customers, Charges, Payouts)
+- Payment Methods
+- Products & Prices
+- Checkout & Payment Links
+- Billing (Subscriptions, Invoices)
+- Connect (Accounts, Transfers)
