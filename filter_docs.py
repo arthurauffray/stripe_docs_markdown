@@ -48,31 +48,35 @@ def get_file_languages(filepath):
                     in_block = False
     return langs
 
-def filter_file_content(filepath, target_lang):
+def filter_file_content(filepath, target_langs):
     """
     Reads the file, keeps only the appropriate code blocks, and overwrites the file.
+    target_langs: a list of strings (e.g., ['python', 'ruby'])
     """
     # 1. Identify available languages
     available_langs = get_file_languages(filepath)
     
-    target_lower = target_lang.lower()
+    # Normalize target languages
+    target_lower_list = [l.lower() for l in target_langs]
     
     # 2. Determine Keep Strategy
     keep_langs = set()
     
     # Strategy:
     # - non-exclusive languages (json, text, etc) are ALWAYS kept.
-    # - if target_lang is present in the file, keep it.
-    # - if target_lang is NOT present, check for 'curl'. 
+    # - for each requested language in target_lower_list, if it is present in the file, keep it.
+    # - if NO requested language is present, check for 'curl'.
     #   - if 'curl' is present, keep 'curl' (fallback).
     #   - otherwise, keep none of the exclusive languages.
     
-    # Note: 'curl' itself might be the target.
-    
-    if target_lower in available_langs:
-        keep_langs.add(target_lower)
-    elif 'curl' in available_langs:
-        # Fallback to curl if target not found
+    any_target_found = False
+    for t_lang in target_lower_list:
+        if t_lang in available_langs:
+            keep_langs.add(t_lang)
+            any_target_found = True
+            
+    if not any_target_found and 'curl' in available_langs:
+        # Fallback to curl if no target found
         keep_langs.add('curl')
     
     # Read content
@@ -119,7 +123,7 @@ def filter_file_content(filepath, target_lang):
     with open(filepath, 'w', encoding='utf-8') as f:
         f.writelines(filtered_lines)
 
-def process_directory(source_dir, dest_dir, target_lang):
+def process_directory(source_dir, dest_dir, target_langs):
     # 1. Copy entire directory structure
     if os.path.exists(dest_dir):
         print(f"Destination {dest_dir} already exists. Removing it to start fresh...")
@@ -129,23 +133,23 @@ def process_directory(source_dir, dest_dir, target_lang):
     shutil.copytree(source_dir, dest_dir)
     
     # 2. Walk through destination and filter .md files
-    print(f"Filtering markdown files for language: {target_lang}")
+    print(f"Filtering markdown files for languages: {target_langs}")
     count = 0
     for root, dirs, files in os.walk(dest_dir):
         for file in files:
             if file.endswith('.md'):
                 filepath = os.path.join(root, file)
-                filter_file_content(filepath, target_lang)
+                filter_file_content(filepath, target_langs)
                 count += 1
                 
     print(f"Processed {count} markdown files.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Copy docs and filter code blocks by language.")
-    parser.add_argument("source", help="Source directory (e.g. docs)")
-    parser.add_argument("dest", help="Destination directory (e.g. docs_python)")
-    parser.add_argument("lang", help="Target language (e.g. python)")
+    parser.add_argument("--source", "-s", required=True, help="Source directory (e.g. docs)")
+    parser.add_argument("--destination", "-d", required=True, help="Destination directory (e.g. docs_python)")
+    parser.add_argument("--languages", "-l", nargs='+', required=True, help="Target languages (e.g. python ruby)")
     
     args = parser.parse_args()
     
-    process_directory(args.source, args.dest, args.lang)
+    process_directory(args.source, args.destination, args.languages)
