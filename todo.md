@@ -17,7 +17,7 @@
 - [ ] Sigma
 - [x] Reporting
 - [ ] Financial Connections
-- [ ] Tax
+- [x] Tax
 - [ ] Identity
 - [x] Crypto
 - [x] Climate
