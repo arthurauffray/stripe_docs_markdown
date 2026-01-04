@@ -1,0 +1,960 @@
+# Stripe API Documentation Structure
+
+This document describes the structure of the Stripe API documentation.
+
+## Naming Conventions
+
+File titles are the exact Stripe document titles with the following transformations:
+
+- **Spaces** → underscores (`_`)
+- **Hyphens** → stay as hyphens (`-`)
+- **Apostrophes** → underscores (e.g., `List a Customer's PaymentMethods` → `list_a_customer_s_paymentmethods.md`)
+- **Underscores in names** → wrapped by underscores (e.g., `Reconcile a customer_balance PaymentIntent` → `reconcile_a_customer__balance_paymentintent.md`)
+
+## Hierarchy
+
+The documentation is organized into three levels:
+
+1. **Category**: Top-level groups (e.g., `billing`, `capital`, `connect`, `checkout`, `core_resources`, `terminal`, `fraud`, `tax`, `products`, `issuing`, `webhooks`)
+2. **Section**: Folders within categories (e.g., `accounts`, `balance`, `charges`, `customers`, `disputes`, `events`, `payouts`, `refunds`)
+3. **Document**: Markdown files containing specific documentation items
+
+### Section Notes
+
+- Each section contains a markdown file with the **same name as the section folder** which serves as an intro (e.g., `/refunds/refunds.md`)
+- Some sections have **v1 (base) and v2 versions** with separate folders (e.g., `/events` (v1) and `/events_v2` (v2))
+- V2 intro files include `_v2` suffix (e.g., `/events_v2/events_v2.md`)
+
+---
+
+## Full Structure
+
+### billing
+
+- 📁 **alerts** (8 docs)
+  - 📄 `alerts.md` *(intro)*
+  - 📄 `activate_a_billing_alert.md`
+  - 📄 `archive_a_billing_alert.md`
+  - 📄 `create_a_billing_alert.md`
+  - 📄 `deactivate_a_billing_alert.md`
+  - 📄 `list_billing_alerts.md`
+  - 📄 `retrieve_a_billing_alert.md`
+  - 📄 `the_alert_object.md`
+- 📁 **credit_balance_summary** (3 docs)
+  - 📄 `credit_balance_summary.md` *(intro)*
+  - 📄 `retrieve_the_credit_balance_summary_for_a_customer.md`
+  - 📄 `the_credit_balance_summary_object.md`
+- 📁 **credit_balance_transaction** (4 docs)
+  - 📄 `credit_balance_transactions.md`
+  - 📄 `list_credit_balance_transactions.md`
+  - 📄 `retrieve_a_credit_balance_transaction.md`
+  - 📄 `the_credit_balance_transaction_object.md`
+- 📁 **credit_grant** (8 docs)
+  - 📄 `credit_grant.md` *(intro)*
+  - 📄 `create_a_credit_grant.md`
+  - 📄 `expire_a_credit_grant.md`
+  - 📄 `list_credit_grants.md`
+  - 📄 `retrieve_a_credit_grant.md`
+  - 📄 `the_credit_grant_object.md`
+  - 📄 `update_a_credit_grant.md`
+  - 📄 `void_a_credit_grant.md`
+- 📁 **credit_note** (11 docs)
+  - 📄 `credit_note.md` *(intro)*
+  - 📄 `create_a_credit_note.md`
+  - 📄 `list_all_credit_notes.md`
+  - 📄 `preview_a_credit_note.md`
+  - 📄 `retrieve_a_credit_note.md`
+  - 📄 `retrieve_a_credit_note_preview_s_line_items.md`
+  - 📄 `retrieve_a_credit_note_s_line_item.md`
+  - 📄 `the_credit_note_line_item_object.md`
+  - 📄 `the_credit_note_object.md`
+  - 📄 `update_a_credit_note.md`
+  - 📄 `void_a_credit_note.md`
+- 📁 **customer_balance_transaction** (6 docs)
+  - 📄 `customer_balance_transaction.md` *(intro)*
+  - 📄 `create_a_customer_balance_transaction.md`
+  - 📄 `list_customer_balance_transactions.md`
+  - 📄 `retrieve_a_customer_balance_transaction.md`
+  - 📄 `the_customer_balance_transaction_object.md`
+  - 📄 `update_a_customer_credit_balance_transaction.md`
+- 📁 **customer_portal_configuration** (6 docs)
+  - 📄 `customer_portal_configuration.md` *(intro)*
+  - 📄 `create_a_portal_configuration.md`
+  - 📄 `list_portal_configurations.md`
+  - 📄 `retrieve_a_portal_configuration.md`
+  - 📄 `the_customer_portal_configuration_object.md`
+  - 📄 `update_a_portal_configuration.md`
+- 📁 **customer_portal_session** (3 docs)
+  - 📄 `customer_portal_session.md` *(intro)*
+  - 📄 `create_a_portal_session.md`
+  - 📄 `the_customer_portal_session_object.md`
+- 📁 **invoice_items** (7 docs)
+  - 📄 `invoice_items.md` *(intro)*
+  - 📄 `create_an_invoice_item.md`
+  - 📄 `delete_an_invoice_item.md`
+  - 📄 `list_all_invoice_items.md`
+  - 📄 `retrieve_an_invoice_item.md`
+  - 📄 `the_invoice_item_object.md`
+  - 📄 `update_an_invoice_item.md`
+- 📁 **invoice_line_item** (7 docs)
+  - 📄 `invoice_line_item.md` *(intro)*
+  - 📄 `bulk_add_invoice_line_items.md`
+  - 📄 `bulk_remove_invoice_line_items.md`
+  - 📄 `bulk_update_invoice_line_items.md`
+  - 📄 `retrieve_an_invoice_s_line_items.md`
+  - 📄 `the_invoice_line_item_object.md`
+  - 📄 `update_an_invoice_s_line_item.md`
+- 📁 **invoice_payment** (4 docs)
+  - 📄 `invoice_payment.md` *(intro)*
+  - 📄 `list_all_payments_for_an_invoice.md`
+  - 📄 `retrieve_an_invoicepayment.md`
+  - 📄 `the_invoice_payment_object.md`
+- 📁 **invoice_rendering_templates** (6 docs)
+  - 📄 `invoice_rendering_templates.md` *(intro)*
+  - 📄 `archive_an_invoice_rendering_template.md`
+  - 📄 `list_all_invoice_rendering_templates.md`
+  - 📄 `retrieve_an_invoice_rendering_template.md`
+  - 📄 `the_invoice_rendering_template_object.md`
+  - 📄 `unarchive_an_invoice_rendering_template.md`
+- 📁 **invoices** (15 docs)
+  - 📄 `invoices.md` *(intro)*
+  - 📄 `attach_a_payment_to_an_invoice.md`
+  - 📄 `create_a_preview_invoice.md`
+  - 📄 `create_an_invoice.md`
+  - 📄 `delete_a_draft_invoice.md`
+  - 📄 `finalize_an_invoice.md`
+  - 📄 `list_all_invoices.md`
+  - 📄 `mark_an_invoice_as_uncollectible.md`
+  - 📄 `pay_an_invoice.md`
+  - 📄 `retrieve_an_invoice.md`
+  - 📄 `search_invoices.md`
+  - 📄 `send_an_invoice_for_manual_payment.md`
+  - 📄 `the_invoice_object.md`
+  - 📄 `update_an_invoice.md`
+  - 📄 `void_an_invoice.md`
+- 📁 **meter_event_adjustment** (3 docs)
+  - 📄 `meter_event_adjustment.md` *(intro)*
+  - 📄 `create_a_billing_meter_event_adjustment.md`
+  - 📄 `the_meter_event_adjustment_object.md`
+- 📁 **meter_event_adjustments_v2** *(v2)* (3 docs)
+  - 📄 `meter_event_adjustments_v2.md` *(intro)*
+  - 📄 `create_a_billing_meter_event_adjustment.md`
+  - 📄 `the_metereventadjustment_object.md`
+- 📁 **meter_event_streams** (4 docs)
+  - 📄 `meter_event_streams.md` *(intro)*
+  - 📄 `create_a_billing_meter_event_with_asynchronous_validation.md`
+  - 📄 `create_billing_meter_event_stream_authentication_session.md`
+  - 📄 `the_metereventsession_object.md`
+- 📁 **meter_event_streams_v2** *(v2)* (4 docs)
+  - 📄 `meter_event_streams_v2.md` *(intro)*
+  - 📄 `create_a_billing_meter_event_with_asynchronous_validation.md`
+  - 📄 `create_billing_meter_event_stream_authentication_session.md`
+  - 📄 `the_metereventsession_object.md`
+- 📁 **meter_event_summary** (3 docs)
+  - 📄 `meter_event_summary.md` *(intro)*
+  - 📄 `list_billing_meter_event_summaries.md`
+  - 📄 `the_meter_event_summary_object.md`
+- 📁 **meter_events** (3 docs)
+  - 📄 `meter_events.md` *(intro)*
+  - 📄 `create_a_billing_meter_event.md`
+  - 📄 `the_meter_event_object.md`
+- 📁 **meter_events_v2** *(v2)* (3 docs)
+  - 📄 `meter_events_v2.md` *(intro)*
+  - 📄 `create_a_billing_meter_event_with_synchronous_validation.md`
+  - 📄 `the_meterevent_object.md`
+- 📁 **meters** (8 docs)
+  - 📄 `meters.md` *(intro)*
+  - 📄 `create_a_billing_meter.md`
+  - 📄 `deactivate_a_billing_meter.md`
+  - 📄 `list_billing_meters.md`
+  - 📄 `reactivate_a_billing_meter.md`
+  - 📄 `retrieve_a_billing_meter.md`
+  - 📄 `the_meter_object.md`
+  - 📄 `update_a_billing_meter.md`
+- 📁 **plans** (7 docs)
+  - 📄 `plans.md` *(intro)*
+  - 📄 `create_a_plan.md`
+  - 📄 `delete_a_plan.md`
+  - 📄 `list_all_plans.md`
+  - 📄 `retrieve_a_plan.md`
+  - 📄 `the_plan_object.md`
+  - 📄 `update_a_plan.md`
+- 📁 **quote** (12 docs)
+  - 📄 `quote.md` *(intro)*
+  - 📄 `accept_a_quote.md`
+  - 📄 `cancel_a_quote.md`
+  - 📄 `create_a_quote.md`
+  - 📄 `download_quote_pdf.md`
+  - 📄 `finalize_a_quote.md`
+  - 📄 `list_all_quotes.md`
+  - 📄 `retrieve_a_quote.md`
+  - 📄 `retrieve_a_quote_s_line_items.md`
+  - 📄 `retrieve_a_quote_s_upfront_line_items.md`
+  - 📄 `the_quote_object.md`
+  - 📄 `update_a_quote.md`
+- 📁 **subscription_items** (7 docs)
+  - 📄 `subscription_items.md` *(intro)*
+  - 📄 `create_a_subscription_item.md`
+  - 📄 `delete_a_subscription_item.md`
+  - 📄 `list_all_subscription_items.md`
+  - 📄 `retrieve_a_subscription_item.md`
+  - 📄 `the_subscription_item_object.md`
+  - 📄 `update_a_subscription_item.md`
+- 📁 **subscription_schedule** (8 docs)
+  - 📄 `subscription_schedule.md` *(intro)*
+  - 📄 `cancel_a_schedule.md`
+  - 📄 `create_a_schedule.md`
+  - 📄 `list_all_schedules.md`
+  - 📄 `release_a_schedule.md`
+  - 📄 `retrieve_a_schedule.md`
+  - 📄 `the_subscription_schedule_object.md`
+  - 📄 `update_a_schedule.md`
+- 📁 **subscriptions** (10 docs)
+  - 📄 `subscriptions.md` *(intro)*
+  - 📄 `cancel_a_subscription.md`
+  - 📄 `create_a_subscription.md`
+  - 📄 `list_subscriptions.md`
+  - 📄 `migrate_a_subscription.md`
+  - 📄 `resume_a_subscription.md`
+  - 📄 `retrieve_a_subscription.md`
+  - 📄 `search_subscriptions.md`
+  - 📄 `the_subscription_object.md`
+  - 📄 `update_a_subscription.md`
+- 📁 **tax_ids** (10 docs)
+  - 📄 `tax_ids.md` *(intro)*
+  - 📄 `create_a_customer_tax_id.md`
+  - 📄 `create_a_tax_id.md`
+  - 📄 `delete_a_customer_tax_id.md`
+  - 📄 `delete_a_tax_id.md`
+  - 📄 `list_all_customer_tax_ids.md`
+  - 📄 `list_all_tax_ids.md`
+  - 📄 `retrieve_a_customer_tax_id.md`
+  - 📄 `retrieve_a_tax_id.md`
+  - 📄 `the_tax_id_object.md`
+- 📁 **test_clocks** (7 docs)
+  - 📄 `test_clocks.md` *(intro)*
+  - 📄 `advance_a_test_clock.md`
+  - 📄 `create_a_test_clock.md`
+  - 📄 `delete_a_test_clock.md`
+  - 📄 `list_all_test_clocks.md`
+  - 📄 `retrieve_a_test_clock.md`
+  - 📄 `the_test_clock_object.md`
+
+### capital
+
+- 📁 **financing_offer** (5 docs)
+  - 📄 `financing_offer.md` *(intro)*
+  - 📄 `list_financing_offers.md`
+  - 📄 `mark_that_a_financing_offer_has_been_delivered.md`
+  - 📄 `retrieve_a_given_financing_offer.md`
+  - 📄 `the_financing_offer_object.md`
+- 📁 **financing_summary** (3 docs)
+  - 📄 `financing_summary.md` *(intro)*
+  - 📄 `retrieve_financing_summary.md`
+  - 📄 `the_financing_summary_object.md`
+
+### checkout
+
+- 📁 **checkout_sessions** (8 docs)
+  - 📄 `checkout_sessions.md` *(intro)*
+  - 📄 `create_a_checkout_session.md`
+  - 📄 `expire_a_checkout_session.md`
+  - 📄 `list_all_checkout_sessions.md`
+  - 📄 `retrieve_a_checkout_session.md`
+  - 📄 `retrieve_a_checkout_session_s_line_items.md`
+  - 📄 `the_checkout_session_object.md`
+  - 📄 `update_a_checkout_session.md`
+
+### climate
+
+- 📁 **climate_order** (7 docs)
+  - 📄 `climate_order.md` *(intro)*
+  - 📄 `cancel_an_order.md`
+  - 📄 `create_an_order.md`
+  - 📄 `list_orders.md`
+  - 📄 `retrieve_an_order.md`
+  - 📄 `the_climate_order_object.md`
+  - 📄 `update_an_order.md`
+- 📁 **climate_product** (4 docs)
+  - 📄 `climate_product.md` *(intro)*
+  - 📄 `list_products.md`
+  - 📄 `retrieve_a_product.md`
+  - 📄 `the_climate_product_object.md`
+- 📁 **climate_supplier** (4 docs)
+  - 📄 `climate_supplier.md` *(intro)*
+  - 📄 `list_suppliers.md`
+  - 📄 `retrieve_a_supplier.md`
+  - 📄 `the_climate_supplier_object.md`
+
+### connect
+
+- 📁 **account_links** (3 docs)
+  - 📄 `account_links.md` *(intro)*
+  - 📄 `create_an_account_link.md`
+  - 📄 `the_account_link_object.md`
+- 📁 **account_session** (3 docs)
+  - 📄 `account_session.md` *(intro)*
+  - 📄 `create_an_account_session.md`
+  - 📄 `the_account_session_object.md`
+- 📁 **accounts** (8 docs)
+  - 📄 `accounts.md` *(intro)*
+  - 📄 `create_an_account.md`
+  - 📄 `delete_an_account.md`
+  - 📄 `list_all_connected_accounts.md`
+  - 📄 `reject_an_account.md`
+  - 📄 `retrieve_account.md`
+  - 📄 `the_account_object.md`
+  - 📄 `update_an_account.md`
+- 📁 **application_fee_refunds** (6 docs)
+  - 📄 `application_fee_refunds.md` *(intro)*
+  - 📄 `create_an_application_fee_refund.md`
+  - 📄 `list_all_application_fee_refunds.md`
+  - 📄 `retrieve_an_application_fee_refund.md`
+  - 📄 `the_application_fee_refund_object.md`
+  - 📄 `update_an_application_fee_refund.md`
+- 📁 **application_fees** (4 docs)
+  - 📄 `application_fees.md` *(intro)*
+  - 📄 `list_all_application_fees.md`
+  - 📄 `retrieve_an_application_fee.md`
+  - 📄 `the_application_fee_object.md`
+- 📁 **balance_settings** (4 docs)
+  - 📄 `balance_settings.md` *(intro)*
+  - 📄 `retrieve_balance_settings.md`
+  - 📄 `the_balance_setting_object.md`
+  - 📄 `update_balance_settings.md`
+- 📁 **capabilities** (5 docs)
+  - 📄 `capabilities.md` *(intro)*
+  - 📄 `list_all_account_capabilities.md`
+  - 📄 `retrieve_an_account_capability.md`
+  - 📄 `the_capability_object.md`
+  - 📄 `update_an_account_capability.md`
+- 📁 **country_specs** (4 docs)
+  - 📄 `country_specs.md` *(intro)*
+  - 📄 `list_country_specs.md`
+  - 📄 `retrieve_a_country_spec.md`
+  - 📄 `the_country_spec_object.md`
+- 📁 **external_account_cards** (7 docs)
+  - 📄 `external_account_cards.md` *(intro)*
+  - 📄 `create_a_card.md`
+  - 📄 `delete_a_card.md`
+  - 📄 `list_all_cards.md`
+  - 📄 `retrieve_a_card.md`
+  - 📄 `the_external_account_card_object.md`
+  - 📄 `update_a_card.md`
+- 📁 **external_bank_accounts** (7 docs)
+  - 📄 `external_bank_accounts.md` *(intro)*
+  - 📄 `create_a_bank_account.md`
+  - 📄 `delete_a_bank_account.md`
+  - 📄 `list_all_bank_accounts.md`
+  - 📄 `retrieve_a_bank_account.md`
+  - 📄 `the_external_bank_account_object.md`
+  - 📄 `update_a_bank_account.md`
+- 📁 **login_links** (3 docs)
+  - 📄 `login_links.md` *(intro)*
+  - 📄 `create_a_login_link.md`
+  - 📄 `the_login_link_object.md`
+- 📁 **person** (7 docs)
+  - 📄 `person.md` *(intro)*
+  - 📄 `create_a_person.md`
+  - 📄 `delete_a_person.md`
+  - 📄 `list_all_persons.md`
+  - 📄 `retrieve_a_person.md`
+  - 📄 `the_person_object.md`
+  - 📄 `update_a_person.md`
+- 📁 **secrets** (6 docs)
+  - 📄 `secrets.md` *(intro)*
+  - 📄 `delete_a_secret.md`
+  - 📄 `find_a_secret.md`
+  - 📄 `list_secrets.md`
+  - 📄 `set_a_secret.md`
+  - 📄 `the_secret_object.md`
+- 📁 **top-ups** (7 docs)
+  - 📄 `top-ups.md` *(intro)*
+  - 📄 `cancel_a_top-up.md`
+  - 📄 `create_a_top-up.md`
+  - 📄 `list_all_top-ups.md`
+  - 📄 `retrieve_a_top-up.md`
+  - 📄 `the_top-up_object.md`
+  - 📄 `update_a_top-up.md`
+- 📁 **transfer_reversals** (6 docs)
+  - 📄 `transfer_reversals.md` *(intro)*
+  - 📄 `create_a_transfer_reversal.md`
+  - 📄 `list_all_reversals.md`
+  - 📄 `retrieve_a_reversal.md`
+  - 📄 `the_transfer_reversal_object.md`
+  - 📄 `update_a_reversal.md`
+- 📁 **transfers** (6 docs)
+  - 📄 `transfers.md` *(intro)*
+  - 📄 `create_a_transfer.md`
+  - 📄 `list_all_transfers.md`
+  - 📄 `retrieve_a_transfer.md`
+  - 📄 `the_transfer_object.md`
+  - 📄 `update_a_transfer.md`
+
+### core_resources
+
+- 📁 **account_links** (3 docs)
+  - 📄 `account_links.md` *(intro)*
+  - 📄 `create_an_account_link.md`
+  - 📄 `the_accountlink_object.md`
+- 📁 **account_tokens** (4 docs)
+  - 📄 `account_tokens.md` *(intro)*
+  - 📄 `create_an_account_token.md`
+  - 📄 `retrieve_an_account_token.md`
+  - 📄 `the_accounttoken_object.md`
+- 📁 **accounts** (8 docs)
+  - 📄 `accounts.md` *(intro)*
+  - 📄 `account_event_types.md`
+  - 📄 `close_an_account.md`
+  - 📄 `create_an_account.md`
+  - 📄 `list_accounts.md`
+  - 📄 `retrieve_an_account.md`
+  - 📄 `the_account_object.md`
+  - 📄 `update_an_account.md`
+- 📁 **balance** (3 docs)
+  - 📄 `balance.md` *(intro)*
+  - 📄 `retrieve_balance.md`
+  - 📄 `the_balance_object.md`
+- 📁 **balance_transactions** (4 docs)
+  - 📄 `balance_transactions.md` *(intro)*
+  - 📄 `list_all_balance_transactions.md`
+  - 📄 `retrieve_a_balance_transaction.md`
+  - 📄 `the_balance_transaction_object.md`
+- 📁 **charges** (8 docs)
+  - 📄 `charges.md` *(intro)*
+  - 📄 `capture_a_charge.md`
+  - 📄 `create_a_charge.md`
+  - 📄 `list_all_charges.md`
+  - 📄 `retrieve_a_charge.md`
+  - 📄 `search_charges.md`
+  - 📄 `the_charge_object.md`
+  - 📄 `update_a_charge.md`
+- 📁 **confirmation_token** (4 docs)
+  - 📄 `confirmation_token.md` *(intro)*
+  - 📄 `create_a_test_confirmation_token.md`
+  - 📄 `retrieve_a_confirmationtoken.md`
+  - 📄 `the_confirmation_token_object.md`
+- 📁 **customer_session** (3 docs)
+  - 📄 `customer_session.md` *(intro)*
+  - 📄 `create_a_customer_session.md`
+  - 📄 `the_customer_session_object.md`
+- 📁 **customers** (8 docs)
+  - 📄 `customers.md` *(intro)*
+  - 📄 `create_a_customer.md`
+  - 📄 `delete_a_customer.md`
+  - 📄 `list_all_customers.md`
+  - 📄 `retrieve_a_customer.md`
+  - 📄 `search_customers.md`
+  - 📄 `the_customer_object.md`
+  - 📄 `update_a_customer.md`
+- 📁 **disputes** (6 docs)
+  - 📄 `disputes.md` *(intro)*
+  - 📄 `close_a_dispute.md`
+  - 📄 `list_all_disputes.md`
+  - 📄 `retrieve_a_dispute.md`
+  - 📄 `the_dispute_object.md`
+  - 📄 `update_a_dispute.md`
+- 📁 **event_destinations** (10 docs)
+  - 📄 `event_destinations.md` *(intro)*
+  - 📄 `create_an_event_destination.md`
+  - 📄 `delete_an_event_destination.md`
+  - 📄 `disable_an_event_destination.md`
+  - 📄 `enable_an_event_destination.md`
+  - 📄 `eventdestination_event_types.md`
+  - 📄 `list_event_destinations.md`
+  - 📄 `retrieve_an_event_destination.md`
+  - 📄 `the_eventdestination_object.md`
+  - 📄 `update_an_event_destination.md`
+- 📁 **events** (5 docs)
+  - 📄 `events.md` *(intro)*
+  - 📄 `list_all_events.md`
+  - 📄 `retrieve_an_event.md`
+  - 📄 `the_event_object.md`
+  - 📄 `types_of_events.md`
+- 📁 **events_v2** *(v2)* (6 docs)
+  - 📄 `events_v2.md` *(intro)*
+  - 📄 `list_events.md`
+  - 📄 `ping_an_event_destination.md`
+  - 📄 `retrieve_an_event.md`
+  - 📄 `the_event_object.md`
+  - 📄 `types_of_events.md`
+- 📁 **file_links** (6 docs)
+  - 📄 `file_links.md` *(intro)*
+  - 📄 `create_a_file_link.md`
+  - 📄 `list_all_file_links.md`
+  - 📄 `retrieve_a_file_link.md`
+  - 📄 `the_file_link_object.md`
+  - 📄 `update_a_file_link.md`
+- 📁 **files** (5 docs)
+  - 📄 `files.md` *(intro)*
+  - 📄 `create_a_file.md`
+  - 📄 `list_all_files.md`
+  - 📄 `retrieve_a_file.md`
+  - 📄 `the_file_object.md`
+- 📁 **mandates** (3 docs)
+  - 📄 `mandates.md` *(intro)*
+  - 📄 `retrieve_a_mandate.md`
+  - 📄 `the_mandate_object.md`
+- 📁 **payment_intents** (14 docs)
+  - 📄 `payment_intents.md` *(intro)*
+  - 📄 `cancel_a_paymentintent.md`
+  - 📄 `capture_a_paymentintent.md`
+  - 📄 `confirm_a_paymentintent.md`
+  - 📄 `create_a_paymentintent.md`
+  - 📄 `increment_an_authorization.md`
+  - 📄 `list_all_paymentintent_lineitems.md`
+  - 📄 `list_all_paymentintents.md`
+  - 📄 `reconcile_a_customer__balance_paymentintent.md`
+  - 📄 `retrieve_a_paymentintent.md`
+  - 📄 `search_paymentintents.md`
+  - 📄 `the_paymentintent_object.md`
+  - 📄 `update_a_payment_intent.md`
+  - 📄 `verify_microdeposits_on_a_paymentintent.md`
+- 📁 **payouts** (8 docs)
+  - 📄 `payouts.md` *(intro)*
+  - 📄 `cancel_a_payout.md`
+  - 📄 `create_a_payout.md`
+  - 📄 `list_all_payouts.md`
+  - 📄 `retrieve_a_payout.md`
+  - 📄 `reverse_a_payout.md`
+  - 📄 `the_payout_object.md`
+  - 📄 `update_a_payout.md`
+- 📁 **person_tokens** (4 docs)
+  - 📄 `person_tokens.md` *(intro)*
+  - 📄 `create_a_person_token.md`
+  - 📄 `retrieve_a_person_token.md`
+  - 📄 `the_persontoken_object.md`
+- 📁 **persons** (8 docs)
+  - 📄 `persons.md` *(intro)*
+  - 📄 `create_a_person.md`
+  - 📄 `delete_a_person.md`
+  - 📄 `list_persons.md`
+  - 📄 `person_event_types.md`
+  - 📄 `retrieve_a_person.md`
+  - 📄 `the_person_object.md`
+  - 📄 `update_a_person.md`
+- 📁 **refunds** (7 docs)
+  - 📄 `refunds.md` *(intro)*
+  - 📄 `cancel_a_refund.md`
+  - 📄 `create_a_refund.md`
+  - 📄 `list_all_refunds.md`
+  - 📄 `retrieve_a_refund.md`
+  - 📄 `the_refund_object.md`
+  - 📄 `update_a_refund.md`
+- 📁 **setup_attempts** (3 docs)
+  - 📄 `setup_attempts.md` *(intro)*
+  - 📄 `list_all_setupattempts.md`
+  - 📄 `the_setupattempt_object.md`
+- 📁 **setup_intents** (9 docs)
+  - 📄 `setup_intents.md` *(intro)*
+  - 📄 `cancel_a_setupintent.md`
+  - 📄 `confirm_a_setupintent.md`
+  - 📄 `create_a_setupintent.md`
+  - 📄 `list_all_setupintents.md`
+  - 📄 `retrieve_a_setupintent.md`
+  - 📄 `the_setupintent_object.md`
+  - 📄 `update_a_setupintent.md`
+  - 📄 `verify_microdeposits_on_a_setupintent.md`
+- 📁 **tokens** (9 docs)
+  - 📄 `tokens.md` *(intro)*
+  - 📄 `create_a_bank_account_token.md`
+  - 📄 `create_a_card_token.md`
+  - 📄 `create_a_cvc_update_token.md`
+  - 📄 `create_a_person_token.md`
+  - 📄 `create_a_pii_token.md`
+  - 📄 `create_an_account_token.md`
+  - 📄 `retrieve_a_token.md`
+  - 📄 `the_token_object.md`
+
+### crypto
+
+- 📁 **crypto_onramp_quotes** (3 docs)
+  - 📄 `crypto_onramp_quotes.md` *(intro)*
+  - 📄 `retrieve_cryptoonrampquotes.md`
+  - 📄 `the_crypto_onramp_quote_object.md`
+- 📁 **crypto_onramp_session** (5 docs)
+  - 📄 `crypto_onramp_session.md` *(intro)*
+  - 📄 `create_a_cryptoonrampsession.md`
+  - 📄 `list_cryptoonrampsessions.md`
+  - 📄 `retrieve_a_cryptoonrampsession.md`
+  - 📄 `the_crypto_onramp_session_object.md`
+
+### entitlements
+
+- 📁 **active_entitlement** (0 docs)
+- 📁 **feature** (0 docs)
+- 📁 **product_feature** (0 docs)
+
+### financial_connections
+
+- 📁 **account_owner** (0 docs)
+- 📁 **accounts** (0 docs)
+- 📁 **session** (0 docs)
+- 📁 **transactions** (0 docs)
+
+### forwarding
+
+- 📁 **forwarding_request** (5 docs)
+  - 📄 `forwarding_request.md` *(intro)*
+  - 📄 `create_a_forwardingrequest.md`
+  - 📄 `list_all_forwardingrequests.md`
+  - 📄 `retrieve_a_forwardingrequest.md`
+  - 📄 `the_forwardingrequest_object.md`
+
+### fraud
+
+- 📁 **early_fraud_warning** (4 docs)
+  - 📄 `early_fraud_warning.md` *(intro)*
+  - 📄 `list_all_early_fraud_warnings.md`
+  - 📄 `retrieve_an_early_fraud_warning.md`
+  - 📄 `the_early_fraud_warning_object.md`
+- 📁 **reviews** (5 docs)
+  - 📄 `reviews.md` *(intro)*
+  - 📄 `approve_a_review.md`
+  - 📄 `list_all_open_reviews.md`
+  - 📄 `retrieve_a_review.md`
+  - 📄 `the_review_object.md`
+- 📁 **value_list_items** (6 docs)
+  - 📄 `value_list_items.md` *(intro)*
+  - 📄 `create_a_value_list_item.md`
+  - 📄 `delete_a_value_list_item.md`
+  - 📄 `list_all_value_list_items.md`
+  - 📄 `retrieve_a_value_list_item.md`
+  - 📄 `the_value_list_item_object.md`
+- 📁 **value_lists** (7 docs)
+  - 📄 `value_lists.md` *(intro)*
+  - 📄 `create_a_value_list.md`
+  - 📄 `delete_a_value_list.md`
+  - 📄 `list_all_value_lists.md`
+  - 📄 `retrieve_a_value_list.md`
+  - 📄 `the_value_list_object.md`
+  - 📄 `update_a_value_list.md`
+
+### identity
+
+- 📁 **verification_report** (0 docs)
+- 📁 **verification_session** (0 docs)
+
+### introduction
+
+- 📄 `api_reference.md`
+- 📄 `authentication.md`
+- 📄 `auto-pagination.md`
+- 📄 `connected_accounts.md`
+- 📄 `errors.md`
+- 📄 `expanding_responses.md`
+- 📄 `idempotent_requests.md`
+- 📄 `include-dependent_response_values.md`
+- 📄 `metadata.md`
+- 📄 `pagination.md`
+- 📄 `request_ids.md`
+- 📄 `search.md`
+- 📄 `versioning.md`
+
+### issuing
+
+- 📁 **authorizations** (14 docs)
+  - 📄 `authorizations.md` *(intro)*
+  - 📄 `approve_an_authorization.md`
+  - 📄 `capture_a_test-mode_authorization.md`
+  - 📄 `create_a_test-mode_authorization.md`
+  - 📄 `decline_an_authorization.md`
+  - 📄 `expire_a_test-mode_authorization.md`
+  - 📄 `finalize_a_test-mode_authorization_s_amount.md`
+  - 📄 `increment_a_test-mode_authorization.md`
+  - 📄 `list_all_authorizations.md`
+  - 📄 `respond_to_fraud_challenge.md`
+  - 📄 `retrieve_an_authorization.md`
+  - 📄 `reverse_a_test-mode_authorization.md`
+  - 📄 `the_authorization_object.md`
+  - 📄 `update_an_authorization.md`
+- 📁 **cardholders** (6 docs)
+  - 📄 `cardholders.md` *(intro)*
+  - 📄 `create_a_cardholder.md`
+  - 📄 `list_all_cardholders.md`
+  - 📄 `retrieve_a_cardholder.md`
+  - 📄 `the_cardholder_object.md`
+  - 📄 `update_a_cardholder.md`
+- 📁 **cards** (11 docs)
+  - 📄 `cards.md` *(intro)*
+  - 📄 `create_a_card.md`
+  - 📄 `deliver_a_testmode_card.md`
+  - 📄 `fail_a_testmode_card.md`
+  - 📄 `list_all_cards.md`
+  - 📄 `retrieve_a_card.md`
+  - 📄 `return_a_testmode_card.md`
+  - 📄 `ship_a_testmode_card.md`
+  - 📄 `submit_a_testmode_card.md`
+  - 📄 `the_card_object.md`
+  - 📄 `update_a_card.md`
+- 📁 **disputes** (7 docs)
+  - 📄 `disputes.md` *(intro)*
+  - 📄 `create_a_dispute.md`
+  - 📄 `list_all_disputes.md`
+  - 📄 `retrieve_a_dispute.md`
+  - 📄 `submit_a_dispute.md`
+  - 📄 `the_dispute_object.md`
+  - 📄 `update_a_dispute.md`
+- 📁 **funding_instructions** (5 docs)
+  - 📄 `funding_instructions.md` *(intro)*
+  - 📄 `create_funding_instructions.md`
+  - 📄 `list_all_funding_instructions.md`
+  - 📄 `simulate_a_top_up.md`
+  - 📄 `the_funding_instruction_object.md`
+- 📁 **personalization_designs** (9 docs)
+  - 📄 `activate_a_testmode_personalization_design.md`
+  - 📄 `create_a_personalization_design.md`
+  - 📄 `deactivate_a_testmode_personalization_design.md`
+  - 📄 `list_all_personalization_designs.md`
+  - 📄 `personalization_design.md`
+  - 📄 `reject_a_testmode_personalization_design.md`
+  - 📄 `retrieve_a_personalization_design.md`
+  - 📄 `the_personalization_design_object.md`
+  - 📄 `update_a_personalization_design.md`
+- 📁 **physical_bundles** (4 docs)
+  - 📄 `physical_bundles.md` *(intro)*
+  - 📄 `list_all_physical_bundles.md`
+  - 📄 `retrieve_a_physical_bundle.md`
+  - 📄 `the_physical_bundle_object.md`
+- 📁 **tokens** (5 docs)
+  - 📄 `tokens.md` *(intro)*
+  - 📄 `list_all_issuing_tokens_for_card.md`
+  - 📄 `retrieve_an_issuing_token.md`
+  - 📄 `the_token_object.md`
+  - 📄 `update_a_token_status.md`
+- 📁 **transactions** (8 docs)
+  - 📄 `transactions.md` *(intro)*
+  - 📄 `create_a_test-mode_force_capture.md`
+  - 📄 `create_a_test-mode_unlinked_refund.md`
+  - 📄 `list_all_transactions.md`
+  - 📄 `refund_a_test-mode_transaction.md`
+  - 📄 `retrieve_a_transaction.md`
+  - 📄 `the_transaction_object.md`
+  - 📄 `update_a_transaction.md`
+
+### payment_links
+
+- 📁 **payment_link** (7 docs)
+  - 📄 `payment_link.md` *(intro)*
+  - 📄 `create_a_payment_link.md`
+  - 📄 `list_all_payment_links.md`
+  - 📄 `retrieve_a_payment_link_s_line_items.md`
+  - 📄 `retrieve_payment_link.md`
+  - 📄 `the_payment_link_object.md`
+  - 📄 `update_a_payment_link.md`
+
+### payment_methods
+
+- 📁 **bank_accounts** (8 docs)
+  - 📄 `bank_accounts.md` *(intro)*
+  - 📄 `create_a_bank_account.md`
+  - 📄 `delete_a_bank_account.md`
+  - 📄 `list_all_bank_accounts.md`
+  - 📄 `retrieve_a_bank_account.md`
+  - 📄 `the_bank_account_object.md`
+  - 📄 `update_a_bank_account.md`
+  - 📄 `verify_a_bank_account.md`
+- 📁 **cards** (7 docs)
+  - 📄 `cards.md` *(intro)*
+  - 📄 `create_a_card.md`
+  - 📄 `delete_a_card.md`
+  - 📄 `list_all_cards.md`
+  - 📄 `retrieve_a_card.md`
+  - 📄 `the_card_object.md`
+  - 📄 `update_a_card.md`
+- 📁 **cash_balance** (4 docs)
+  - 📄 `cash_balance.md` *(intro)*
+  - 📄 `retrieve_a_cash_balance.md`
+  - 📄 `the_cash_balance_object.md`
+  - 📄 `update_a_cash_balance_s_settings.md`
+- 📁 **cash_balance_transaction** (6 docs)
+  - 📄 `cash_balance_transactions.md`
+  - 📄 `create_or_retrieve_funding_instructions_for_a_customer_cash_balance.md`
+  - 📄 `fund_a_test_mode_cash_balance.md`
+  - 📄 `list_cash_balance_transactions.md`
+  - 📄 `retrieve_a_cash_balance_transaction.md`
+  - 📄 `the_cash_balance_transaction_object.md`
+- 📁 **payment_method_configurations** (6 docs)
+  - 📄 `payment_method_configurations.md` *(intro)*
+  - 📄 `create_a_payment_method_configuration.md`
+  - 📄 `list_payment_method_configurations.md`
+  - 📄 `retrieve_payment_method_configuration.md`
+  - 📄 `the_payment_method_configuration_objet.md`
+  - 📄 `update_a_payment_method_configuration.md`
+- 📁 **payment_method_domains** (7 docs)
+  - 📄 `payment_method_domains.md` *(intro)*
+  - 📄 `create_a_payment_method_domain.md`
+  - 📄 `list_payment_method_domains.md`
+  - 📄 `retrieve_a_payment_method_domain.md`
+  - 📄 `the_paymentmethoddomain_object.md`
+  - 📄 `update_a_payment_method_domain.md`
+  - 📄 `validate_an_existing_payment_method_domain.md`
+- 📁 **payment_methods** (9 docs)
+  - 📄 `payment_methods.md` *(intro)*
+  - 📄 `attach_a_paymentmethod_to_a_customer.md`
+  - 📄 `create_a_paymentmethod.md`
+  - 📄 `detach_a_paymentmethod_from_a_customer.md`
+  - 📄 `list_paymentmethods.md`
+  - 📄 `retrieve_a_customer_s_paymentmethod.md`
+  - 📄 `retrieve_a_paymentmethod.md`
+  - 📄 `the_paymentmethod_object.md`
+  - 📄 `update_a_paymentmethod.md`
+- 📁 **sources** (7 docs)
+  - 📄 `sources.md` *(intro)*
+  - 📄 `attach_a_source.md`
+  - 📄 `create_a_source.md`
+  - 📄 `detach_a_source.md`
+  - 📄 `retrieve_a_source.md`
+  - 📄 `the_source_object.md`
+  - 📄 `update_a_source.md`
+
+### payment_records
+
+- 📁 **payment_attempt_records** (0 docs)
+- 📁 **payment_records** (0 docs)
+
+### products
+
+- 📁 **coupons** (7 docs)
+  - 📄 `coupons.md` *(intro)*
+  - 📄 `create_a_coupon.md`
+  - 📄 `delete_a_coupon.md`
+  - 📄 `list_all_coupons.md`
+  - 📄 `retrieve_a_coupon.md`
+  - 📄 `the_coupon_object.md`
+  - 📄 `update_a_coupon.md`
+- 📁 **discounts** (4 docs)
+  - 📄 `discounts.md` *(intro)*
+  - 📄 `delete_a_customer_discount.md`
+  - 📄 `delete_a_subscription_discount.md`
+  - 📄 `the_discount_object.md`
+- 📁 **prices** (7 docs)
+  - 📄 `prices.md` *(intro)*
+  - 📄 `create_a_price.md`
+  - 📄 `list_all_prices.md`
+  - 📄 `retrieve_a_price.md`
+  - 📄 `search_prices.md`
+  - 📄 `the_price_object.md`
+  - 📄 `update_a_price.md`
+- 📁 **products** (8 docs)
+  - 📄 `products.md` *(intro)*
+  - 📄 `create_a_product.md`
+  - 📄 `delete_a_product.md`
+  - 📄 `list_all_products.md`
+  - 📄 `retrieve_a_product.md`
+  - 📄 `search_products.md`
+  - 📄 `the_product_object.md`
+  - 📄 `update_a_product.md`
+- 📁 **promotion_code** (6 docs)
+  - 📄 `promotion_code.md` *(intro)*
+  - 📄 `create_a_promotion_code.md`
+  - 📄 `list_all_promotion_codes.md`
+  - 📄 `retrieve_a_promotion_code.md`
+  - 📄 `the_promotion_code_object.md`
+  - 📄 `update_a_promotion_code.md`
+- 📁 **shipping_rates** (5 docs)
+  - 📄 `shipping_rates.md` *(intro)*
+  - 📄 `create_a_shipping_rate.md`
+  - 📄 `list_all_shipping_rates.md`
+  - 📄 `retrieve_a_shipping_rate.md`
+  - 📄 `update_a_shipping_rate.md`
+- 📁 **tax_code** (4 docs)
+  - 📄 `tax_code.md` *(intro)*
+  - 📄 `list_all_tax_codes.md`
+  - 📄 `retrieve_a_tax_code.md`
+  - 📄 `the_tax_code_object.md`
+- 📁 **tax_rate** (6 docs)
+  - 📄 `tax_rate.md` *(intro)*
+  - 📄 `create_a_tax_rate.md`
+  - 📄 `list_all_tax_rates.md`
+  - 📄 `retrieve_a_tax_rate.md`
+  - 📄 `the_tax_rate_object.md`
+  - 📄 `update_a_tax_rate.md`
+
+### reporting
+
+- 📁 **report_runs** (5 docs)
+  - 📄 `report_runs.md` *(intro)*
+  - 📄 `create_a_report_run.md`
+  - 📄 `list_all_report_runs.md`
+  - 📄 `retrieve_a_report_run.md`
+  - 📄 `the_report_run_object.md`
+- 📁 **report_types** (4 docs)
+  - 📄 `report_types.md` *(intro)*
+  - 📄 `list_all_report_types.md`
+  - 📄 `retrieve_a_report_type.md`
+  - 📄 `the_report_type_object.md`
+
+### reserves
+
+- 📄 `reserves.md`
+- 📁 **reserve_holds** (6 docs)
+  - 📄 `reserve_holds.md` *(intro)*
+  - 📄 `create_a_reservehold.md`
+  - 📄 `list_reserveholds.md`
+  - 📄 `retrieve_a_reservehold.md`
+  - 📄 `the_reservehold_object.md`
+  - 📄 `update_a_reservehold.md`
+- 📁 **reserve_plans** (7 docs)
+  - 📄 `reserve_plans.md` *(intro)*
+  - 📄 `create_a_reserveplan.md`
+  - 📄 `disable_a_reserveplan.md`
+  - 📄 `list_reserveplans.md`
+  - 📄 `retrieve_a_reserveplan.md`
+  - 📄 `the_reserveplan_object.md`
+  - 📄 `update_a_reserveplan.md`
+- 📁 **reserve_releases** (5 docs)
+  - 📄 `list_reservereleases.md`
+  - 📄 `retrieve_a_reserverelease.md`
+  - 📄 `reverse_releases.md`
+  - 📄 `the_reserverelease_object.md`
+  - 📄 `update_a_reserverelease.md`
+
+### sigma
+
+- 📁 **query_run** (0 docs)
+- 📁 **scheduled_queries** (0 docs)
+
+### tax
+
+- 📁 **tax_association** (0 docs)
+- 📁 **tax_calculations** (0 docs)
+- 📁 **tax_registrations** (0 docs)
+- 📁 **tax_settings** (0 docs)
+- 📁 **tax_transactions** (0 docs)
+
+### terminal
+
+- 📁 **configuration** (0 docs)
+- 📁 **connection_token** (0 docs)
+- 📁 **location** (0 docs)
+- 📁 **reader** (0 docs)
+- 📁 **terminal_hardware_order** (0 docs)
+- 📁 **terminal_hardware_product** (0 docs)
+- 📁 **terminal_hardware_shipping_method** (0 docs)
+- 📁 **terminal_hardware_sku** (0 docs)
+
+### treasury
+
+- 📁 **credit_reversals** (0 docs)
+- 📁 **debit_reversals** (0 docs)
+- 📁 **financial_account_features** (0 docs)
+- 📁 **financial_accounts** (0 docs)
+- 📁 **inbound_transfers** (0 docs)
+- 📁 **outbound_payments** (0 docs)
+- 📁 **outbound_transfers** (0 docs)
+- 📁 **received_credits** (0 docs)
+- 📁 **received_debits** (0 docs)
+- 📁 **transaction_entries** (0 docs)
+- 📁 **transactions** (0 docs)
+
+### webhooks
+
+- 📁 **webhook_endpoints** (7 docs)
+  - 📄 `webhook_endpoints.md` *(intro)*
+  - 📄 `create_a_webhook_endpoint.md`
+  - 📄 `delete_a_webhook_endpoint.md`
+  - 📄 `list_all_webhook_endpoints.md`
+  - 📄 `retrieve_a_webhook_endpoint.md`
+  - 📄 `the_webhook_endpoint_object.md`
+  - 📄 `update_a_webhook_endpoint.md`

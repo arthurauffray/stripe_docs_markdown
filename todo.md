@@ -9,7 +9,7 @@
 - [x] Connect
 - [x] Reserves
 - [x] Fraud
-- [ ] Issuing
+- [x] Issuing
 - [ ] Terminal
 - [ ] Treasury
 - [ ] Payment Records
