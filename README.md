@@ -5,6 +5,10 @@
 An offline-first, LLM-optimized collection of the entire Stripe API documentation. Every endpoint, every object, and every guide — organized and ready for your next project.
 
 ---
+#### Note: not all categories are completed, see [todo.md](/todo.md). Categories are either empty or completed.
+
+####  Note: read [structure.md](/structure.md) to understand definitions and available categories.
+----
 
 ## ✨ Features
 
