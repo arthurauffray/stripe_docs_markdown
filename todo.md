@@ -4,10 +4,10 @@
 - [x] Products
 - [x] Checkout
 - [x] Payment Links
-- [ ] Billing
+- [x] Billing
 - [x] Capital
 - [x] Connect
-- [ ] Reserves
+- [x] Reserves
 - [ ] Fraud
 - [ ] Issuing
 - [ ] Terminal
