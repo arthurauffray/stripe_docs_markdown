@@ -12,7 +12,7 @@
 - [x] Issuing
 - [x] Terminal
 - [ ] Treasury
-- [ ] Payment Records
+- [x] Payment Records
 - [ ] Entitlements
 - [ ] Sigma
 - [x] Reporting
