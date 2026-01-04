@@ -1,0 +1,25 @@
+- [x] Introduction
+- [x] Core Resources
+- [x] Payment Methods
+- [x] Products
+- [x] Checkout
+- [x] Payment Links
+- [ ] Billing
+- [x] Capital
+- [x] Connect
+- [ ] Reserves
+- [ ] Fraud
+- [ ] Issuing
+- [ ] Terminal
+- [ ] Treasury
+- [ ] Payment Records
+- [ ] Entitlements
+- [ ] Sigma
+- [x] Reporting
+- [ ] Financial Connections
+- [ ] Tax
+- [ ] Identity
+- [x] Crypto
+- [x] Climate
+- [x] Forwarding
+- [x] Webhooks
