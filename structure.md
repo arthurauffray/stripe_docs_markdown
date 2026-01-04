@@ -789,11 +789,12 @@ The documentation is organized into three levels:
   - 📄 `the_paymentmethoddomain_object.md`
   - 📄 `update_a_payment_method_domain.md`
   - 📄 `validate_an_existing_payment_method_domain.md`
-- 📁 **payment_methods** (9 docs)
+- 📁 **payment_methods** (10 docs)
   - 📄 `payment_methods.md` *(intro)*
   - 📄 `attach_a_paymentmethod_to_a_customer.md`
   - 📄 `create_a_paymentmethod.md`
   - 📄 `detach_a_paymentmethod_from_a_customer.md`
+  - 📄 `list_a_customer_s_paymentmethods.md`
   - 📄 `list_paymentmethods.md`
   - 📄 `retrieve_a_customer_s_paymentmethod.md`
   - 📄 `retrieve_a_paymentmethod.md`
@@ -810,8 +811,22 @@ The documentation is organized into three levels:
 
 ### payment_records
 
-- 📁 **payment_attempt_records** (0 docs)
-- 📁 **payment_records** (0 docs)
+- 📁 **payment_attempt_records** (4 docs)
+  - 📄 `payment_attempt_records.md` *(intro)*
+  - 📄 `list_payment_attempt_records.md`
+  - 📄 `retrieve_a_payment_attempt_record.md`
+  - 📄 `the_payment_attempt_record_object.md`
+- 📁 **payment_records** (10 docs)
+  - 📄 `payment_records.md` *(intro)*
+  - 📄 `report_a_payment.md`
+  - 📄 `report_a_payment_attempt.md`
+  - 📄 `report_a_refund.md`
+  - 📄 `report_payment_attempt_cancelled.md`
+  - 📄 `report_payment_attempt_failed.md`
+  - 📄 `report_payment_attempt_guaranteed.md`
+  - 📄 `report_payment_attempt_informational.md`
+  - 📄 `retrieve_a_payment_record.md`
+  - 📄 `the_payment_record_object.md`
 
 ### products
 
@@ -917,22 +932,102 @@ The documentation is organized into three levels:
 
 ### tax
 
-- 📁 **tax_association** (0 docs)
-- 📁 **tax_calculations** (0 docs)
-- 📁 **tax_registrations** (0 docs)
-- 📁 **tax_settings** (0 docs)
-- 📁 **tax_transactions** (0 docs)
+- 📁 **tax_association** (3 docs)
+  - 📄 `tax_association.md` *(intro)*
+  - 📄 `find_a_tax_association.md`
+  - 📄 `the_tax_association_object.md`
+- 📁 **tax_calculations** (5 docs)
+  - 📄 `tax_calculations.md` *(intro)*
+  - 📄 `create_a_tax_calculation.md`
+  - 📄 `retrieve_a_calculation_s_line_items.md`
+  - 📄 `retrieve_a_tax_calculation.md`
+  - 📄 `the_tax_calculation_object.md`
+- 📁 **tax_registrations** (6 docs)
+  - 📄 `tax_registrations.md` *(intro)*
+  - 📄 `create_a_registration.md`
+  - 📄 `list_registrations.md`
+  - 📄 `retrieve_a_registration.md`
+  - 📄 `the_tax_registration_object.md`
+  - 📄 `update_a_registration.md`
+- 📁 **tax_settings** (4 docs)
+  - 📄 `tax_settings.md` *(intro)*
+  - 📄 `retrieve_settings.md`
+  - 📄 `the_tax_setting_object.md`
+  - 📄 `update_settings.md`
+- 📁 **tax_transactions** (6 docs)
+  - 📄 `tax_transactions.md` *(intro)*
+  - 📄 `create_a_reversal_transaction.md`
+  - 📄 `create_a_transaction_from_a_calculation.md`
+  - 📄 `retrieve_a_transaction.md`
+  - 📄 `retrieve_a_transaction_s_line_items.md`
+  - 📄 `the_tax_transaction_object.md`
 
 ### terminal
 
-- 📁 **configuration** (0 docs)
-- 📁 **connection_token** (0 docs)
-- 📁 **location** (0 docs)
-- 📁 **reader** (0 docs)
-- 📁 **terminal_hardware_order** (0 docs)
-- 📁 **terminal_hardware_product** (0 docs)
-- 📁 **terminal_hardware_shipping_method** (0 docs)
-- 📁 **terminal_hardware_sku** (0 docs)
+- 📁 **configuration** (7 docs)
+  - 📄 `configuration.md` *(intro)*
+  - 📄 `create_a_configuration.md`
+  - 📄 `delete_a_configuration.md`
+  - 📄 `list_all_configurations.md`
+  - 📄 `rertieve_a_configuration.md`
+  - 📄 `the_configuration_object.md`
+  - 📄 `update_a_configuration.md`
+- 📁 **connection_token** (3 docs)
+  - 📄 `connection_token.md` *(intro)*
+  - 📄 `create_a_connection_token.md`
+  - 📄 `the_connection_token_object.md`
+- 📁 **location** (7 docs)
+  - 📄 `location.md` *(intro)*
+  - 📄 `create_a_location.md`
+  - 📄 `delete_a_location.md`
+  - 📄 `list_all_locations.md`
+  - 📄 `retrieve_a_location.md`
+  - 📄 `the_location_object.md`
+  - 📄 `update_a_location.md`
+- 📁 **reader** (16 docs)
+  - 📄 `reader.md` *(intro)*
+  - 📄 `cancel_the_current_reader_action.md`
+  - 📄 `collect_inputs_using_a_reader.md`
+  - 📄 `confirm_a_paymentintent_on_the_reader.md`
+  - 📄 `create_a_reader.md`
+  - 📄 `delete_a_reader.md`
+  - 📄 `hand-off_a_paymentintent_to_a_reader.md`
+  - 📄 `hand-off_a_setupintent_to_a_reader.md`
+  - 📄 `hand_off_a_paymentintent_to_a_reader_and_collect_card_details.md`
+  - 📄 `list_all_readers.md`
+  - 📄 `refund_a_charge_or_a_paymentintent_in-person.md`
+  - 📄 `retrieve_a_reader.md`
+  - 📄 `set_reader_display.md`
+  - 📄 `simulate_presenting_a_payment_method.md`
+  - 📄 `the_reader_object.md`
+  - 📄 `update_a_reader.md`
+- 📁 **terminal_hardware_order** (11 docs)
+  - 📄 `terminal_hardware_order.md` *(intro)*
+  - 📄 `cancel_a_terminal_hardware_order.md`
+  - 📄 `create_a_terminal_hardware_order.md`
+  - 📄 `list_all_terminal_hardware_orders.md`
+  - 📄 `preview_a_terminal_hardware_order.md`
+  - 📄 `retrieve_a_terminal_hardware_order.md`
+  - 📄 `test_mode_:_mark_a_terminal_hardware_order_as_delivered.md`
+  - 📄 `test_mode_:_mark_a_terminal_hardware_order_as_ready_to_ship.md`
+  - 📄 `test_mode_:_mark_a_terminal_hardware_order_as_shipped.md`
+  - 📄 `test_mode_:_mark_a_terminal_hardware_order_as_undeliverable.md`
+  - 📄 `the_terminalhardwareorder_object.md`
+- 📁 **terminal_hardware_product** (4 docs)
+  - 📄 `terminal_hardware_product.md` *(intro)*
+  - 📄 `list_all_terminal_hardware_products.md`
+  - 📄 `retrieve_a_terminal_hardware_product.md`
+  - 📄 `the_terminalhardwareproduct_object.md`
+- 📁 **terminal_hardware_shipping_method** (4 docs)
+  - 📄 `terminal_hardware_shipping_method.md` *(intro)*
+  - 📄 `list_all_terminal_hardware_shipping_methods.md`
+  - 📄 `retrieve_a_terminal_hardware_shipping_method.md`
+  - 📄 `the_terminal_hardware_shipping_method_object.md`
+- 📁 **terminal_hardware_sku** (4 docs)
+  - 📄 `terminal_hardware_sku.md` *(intro)*
+  - 📄 `list_all_terminal_hardware_skus.md`
+  - 📄 `retrieve_an_available_terminal_hardware_sku.md`
+  - 📄 `the_terminalhardwaresku_object.md`
 
 ### treasury
 
