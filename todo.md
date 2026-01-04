@@ -10,7 +10,7 @@
 - [x] Reserves
 - [x] Fraud
 - [x] Issuing
-- [ ] Terminal
+- [x] Terminal
 - [ ] Treasury
 - [ ] Payment Records
 - [ ] Entitlements
