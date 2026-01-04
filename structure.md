@@ -10,6 +10,7 @@ File titles are the exact Stripe document titles with the following transformati
 - **Hyphens** → stay as hyphens (`-`)
 - **Apostrophes** → underscores (e.g., `List a Customer's PaymentMethods` → `list_a_customer_s_paymentmethods.md`)
 - **Underscores in names** → wrapped by underscores (e.g., `Reconcile a customer_balance PaymentIntent` → `reconcile_a_customer__balance_paymentintent.md`)
+- **Colons** → wrapped by underscores (`_:_`)
 
 ## Hierarchy
 
@@ -45,7 +46,7 @@ The documentation is organized into three levels:
   - 📄 `retrieve_the_credit_balance_summary_for_a_customer.md`
   - 📄 `the_credit_balance_summary_object.md`
 - 📁 **credit_balance_transaction** (4 docs)
-  - 📄 `credit_balance_transactions.md`
+  - 📄 `credit_balance_transaction.md` *(intro)*
   - 📄 `list_credit_balance_transactions.md`
   - 📄 `retrieve_a_credit_balance_transaction.md`
   - 📄 `the_credit_balance_transaction_object.md`
@@ -65,7 +66,7 @@ The documentation is organized into three levels:
   - 📄 `preview_a_credit_note.md`
   - 📄 `retrieve_a_credit_note.md`
   - 📄 `retrieve_a_credit_note_preview_s_line_items.md`
-  - 📄 `retrieve_a_credit_note_s_line_item.md`
+  - 📄 `retrieve_a_credit_note_s_line_items.md`
   - 📄 `the_credit_note_line_item_object.md`
   - 📄 `the_credit_note_object.md`
   - 📄 `update_a_credit_note.md`
@@ -508,7 +509,7 @@ The documentation is organized into three levels:
   - 📄 `retrieve_a_paymentintent.md`
   - 📄 `search_paymentintents.md`
   - 📄 `the_paymentintent_object.md`
-  - 📄 `update_a_payment_intent.md`
+  - 📄 `update_a_paymentintent.md`
   - 📄 `verify_microdeposits_on_a_paymentintent.md`
 - 📁 **payouts** (8 docs)
   - 📄 `payouts.md` *(intro)*
@@ -702,11 +703,11 @@ The documentation is organized into three levels:
   - 📄 `simulate_a_top_up.md`
   - 📄 `the_funding_instruction_object.md`
 - 📁 **personalization_designs** (9 docs)
+  - 📄 `personalization_designs.md` *(intro)*
   - 📄 `activate_a_testmode_personalization_design.md`
   - 📄 `create_a_personalization_design.md`
   - 📄 `deactivate_a_testmode_personalization_design.md`
   - 📄 `list_all_personalization_designs.md`
-  - 📄 `personalization_design.md`
   - 📄 `reject_a_testmode_personalization_design.md`
   - 📄 `retrieve_a_personalization_design.md`
   - 📄 `the_personalization_design_object.md`
@@ -768,7 +769,7 @@ The documentation is organized into three levels:
   - 📄 `the_cash_balance_object.md`
   - 📄 `update_a_cash_balance_s_settings.md`
 - 📁 **cash_balance_transaction** (6 docs)
-  - 📄 `cash_balance_transactions.md`
+  - 📄 `cash_balance_transaction.md` *(intro)*
   - 📄 `create_or_retrieve_funding_instructions_for_a_customer_cash_balance.md`
   - 📄 `fund_a_test_mode_cash_balance.md`
   - 📄 `list_cash_balance_transactions.md`
@@ -779,8 +780,8 @@ The documentation is organized into three levels:
   - 📄 `create_a_payment_method_configuration.md`
   - 📄 `list_payment_method_configurations.md`
   - 📄 `retrieve_payment_method_configuration.md`
-  - 📄 `the_payment_method_configuration_objet.md`
-  - 📄 `update_a_payment_method_configuration.md`
+  - 📄 `the_payment_method_configuration_object.md`
+  - 📄 `update_payment_method_configuration.md`
 - 📁 **payment_method_domains** (7 docs)
   - 📄 `payment_method_domains.md` *(intro)*
   - 📄 `create_a_payment_method_domain.md`
@@ -821,7 +822,7 @@ The documentation is organized into three levels:
   - 📄 `report_a_payment.md`
   - 📄 `report_a_payment_attempt.md`
   - 📄 `report_a_refund.md`
-  - 📄 `report_payment_attempt_cancelled.md`
+  - 📄 `report_payment_attempt_canceled.md`
   - 📄 `report_payment_attempt_failed.md`
   - 📄 `report_payment_attempt_guaranteed.md`
   - 📄 `report_payment_attempt_informational.md`
@@ -919,9 +920,9 @@ The documentation is organized into three levels:
   - 📄 `the_reserveplan_object.md`
   - 📄 `update_a_reserveplan.md`
 - 📁 **reserve_releases** (5 docs)
+  - 📄 `reserve_releases.md` *(intro)*
   - 📄 `list_reservereleases.md`
   - 📄 `retrieve_a_reserverelease.md`
-  - 📄 `reverse_releases.md`
   - 📄 `the_reserverelease_object.md`
   - 📄 `update_a_reserverelease.md`
 
@@ -969,7 +970,7 @@ The documentation is organized into three levels:
   - 📄 `create_a_configuration.md`
   - 📄 `delete_a_configuration.md`
   - 📄 `list_all_configurations.md`
-  - 📄 `rertieve_a_configuration.md`
+  - 📄 `retrieve_a_configuration.md`
   - 📄 `the_configuration_object.md`
   - 📄 `update_a_configuration.md`
 - 📁 **connection_token** (3 docs)
