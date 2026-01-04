@@ -8,7 +8,7 @@
 - [x] Capital
 - [x] Connect
 - [x] Reserves
-- [ ] Fraud
+- [x] Fraud
 - [ ] Issuing
 - [ ] Terminal
 - [ ] Treasury
